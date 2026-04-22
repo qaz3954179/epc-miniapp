@@ -1,25 +1,37 @@
 import { PropsWithChildren, useState, useEffect } from 'react'
-import { useDidShow, useDidHide } from '@tarojs/taro'
+import { useDidShow } from '@tarojs/taro'
+import { useAuthStore } from './store/auth'
+import { authApi } from './services/api'
 import './app.scss'
 
 function App(props: PropsWithChildren) {
-  // 应用启动时检查登录状态
+  const setAuth = useAuthStore((s) => s.setAuth)
+  const logout = useAuthStore((s) => s.logout)
+  const [checking, setChecking] = useState(true)
+
   useEffect(() => {
-    // TODO: 检查本地存储的 token
-    const token = Taro.getStorageSync('token')
-    if (!token) {
-      // 未登录，后续跳转到登录页
-    }
+    checkAuth()
   }, [])
 
+  const checkAuth = async () => {
+    const token = useAuthStore.getState().token
+    if (token) {
+      try {
+        const user = await authApi.getMe()
+        setAuth(token, user)
+      } catch {
+        // Token 失效
+        logout()
+      }
+    }
+    setChecking(false)
+  }
+
   useDidShow(() => {
-    // 小程序进入前台
+    // 小程序进入前台时可刷新状态
   })
 
-  useDidHide(() => {
-    // 小程序进入后台
-  })
-
+  // TODO: 后续加一个 loading 页，checking 时显示
   return props.children
 }
 

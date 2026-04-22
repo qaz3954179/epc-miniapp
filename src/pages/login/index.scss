@@ -46,4 +46,19 @@
   height: 96rpx;
   line-height: 96rpx;
   border: none;
+  text-align: center;
+}
+
+.btn-wechat.loading {
+  opacity: 0.7;
+}
+
+.login-tips {
+  margin-top: 32rpx;
+  text-align: center;
+}
+
+.tips-text {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.6);
 }
