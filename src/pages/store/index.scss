@@ -1,0 +1,117 @@
+.store-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding-bottom: 120rpx;
+}
+
+.coins-header {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  padding: 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coins-label {
+  font-size: 26rpx;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.coins-value {
+  font-size: 60rpx;
+  font-weight: bold;
+  color: #fff;
+}
+
+.tab-bar {
+  display: flex;
+  gap: 16rpx;
+  padding: 24rpx;
+}
+
+.tab-item {
+  padding: 12rpx 28rpx;
+  border-radius: 16rpx;
+  background: #fff;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.tab-item.active {
+  background: linear-gradient(135deg, #FF6B35 0%, #FFB347 100%);
+  color: #fff;
+  font-weight: bold;
+}
+
+.prize-list {
+  padding: 0 24rpx;
+  height: auto;
+}
+
+.prize-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24rpx;
+}
+
+.prize-card {
+  flex: 0 0 calc(50% - 12rpx);
+  background: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.06);
+}
+
+.prize-image {
+  height: 200rpx;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80rpx;
+}
+
+.prize-info {
+  padding: 20rpx;
+}
+
+.prize-name {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.prize-desc {
+  font-size: 22rpx;
+  color: #999;
+  display: block;
+  margin-bottom: 16rpx;
+}
+
+.prize-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prize-coins {
+  font-size: 26rpx;
+  color: #FF6B35;
+  font-weight: bold;
+}
+
+.btn-redeem {
+  background: #FF6B35;
+  color: #fff;
+  font-size: 24rpx;
+  padding: 10rpx 24rpx;
+  border-radius: 12rpx;
+  font-weight: bold;
+}
+
+.btn-redeem.disabled {
+  background: #ddd;
+  color: #999;
+}
