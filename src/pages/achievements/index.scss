@@ -1,0 +1,124 @@
+.achievements-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #faf0ff 0%, #f5f5f5 100%);
+  padding-bottom: 40rpx;
+}
+
+/* 概览 */
+.achieve-summary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 48rpx 32rpx;
+  color: #fff;
+}
+
+.achieve-summary-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.achieve-summary-count {
+  font-size: 26rpx;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 16rpx;
+}
+
+.achieve-progress-bar {
+  height: 12rpx;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+
+.achieve-progress-fill {
+  height: 100%;
+  background: #fff;
+  border-radius: 6rpx;
+  transition: width 0.5s ease;
+}
+
+/* 区域标题 */
+.achieve-section-title {
+  padding: 24rpx 32rpx 12rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 网格 */
+.achieve-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+  padding: 0 24rpx;
+}
+
+.achieve-card {
+  flex: 0 0 calc(33.33% - 12rpx);
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 24rpx 12rpx;
+  text-align: center;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.06);
+}
+
+.achieve-card.locked {
+  opacity: 0.5;
+  filter: grayscale(0.5);
+}
+
+.achieve-icon {
+  font-size: 56rpx;
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.achieve-name {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #333;
+  display: block;
+}
+
+.achieve-date {
+  font-size: 20rpx;
+  color: #999;
+  display: block;
+  margin-top: 4rpx;
+}
+
+.achieve-hint {
+  font-size: 20rpx;
+  color: #999;
+  display: block;
+  margin-top: 4rpx;
+}
+
+/* 骨架屏 */
+.skeleton-card {
+  height: 160rpx;
+  background: #ddd;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+  padding: 24rpx;
+}
+
+.skeleton-item {
+  flex: 0 0 calc(33.33% - 12rpx);
+  height: 160rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}

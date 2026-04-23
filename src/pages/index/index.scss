@@ -240,3 +240,111 @@
 .bottom-safe {
   height: 120rpx;
 }
+
+/* ─── 家长端花园 ─────────────────────────────────────────── */
+
+.baby-selector {
+  white-space: nowrap;
+  margin-bottom: 24rpx;
+}
+
+.baby-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8rpx;
+  padding: 12rpx 24rpx;
+  margin-right: 16rpx;
+  border-radius: 32rpx;
+  background: #fff;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.06);
+}
+
+.baby-chip.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.baby-chip.active .baby-name {
+  color: #fff;
+}
+
+.baby-avatar {
+  font-size: 32rpx;
+}
+
+.baby-name {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.baby-card {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 32rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+}
+
+.baby-card-header {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  margin-bottom: 24rpx;
+}
+
+.baby-card-avatar {
+  font-size: 64rpx;
+}
+
+.baby-card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.baby-card-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.baby-card-coins {
+  font-size: 26rpx;
+  color: #FF6B35;
+}
+
+.baby-card-stats {
+  display: flex;
+  gap: 16rpx;
+  margin-bottom: 24rpx;
+}
+
+.baby-stat {
+  flex: 1;
+  background: #f8f8ff;
+  border-radius: 16rpx;
+  padding: 16rpx;
+  text-align: center;
+}
+
+.baby-stat-value {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  display: block;
+}
+
+.baby-stat-label {
+  font-size: 22rpx;
+  color: #999;
+  display: block;
+  margin-top: 4rpx;
+}
+
+.baby-card-action {
+  text-align: center;
+  color: #667eea;
+  font-size: 28rpx;
+  padding: 16rpx;
+  border-top: 1rpx solid #f0f0f0;
+}

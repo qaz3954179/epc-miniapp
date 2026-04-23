@@ -10,10 +10,6 @@ export default defineAppConfig({
     'pages/exam-report/index',
     'pages/achievements/index',
     'pages/growth/index',
-    'pages/parent/garden',
-    'pages/parent/data',
-    'pages/parent/approve',
-    'pages/parent/profile',
     'pages/planet/index',
   ],
   window: {
@@ -25,6 +21,7 @@ export default defineAppConfig({
     enablePullDownRefresh: true,
   },
   tabBar: {
+    custom: false,
     color: '#999999',
     selectedColor: '#667eea',
     backgroundColor: '#ffffff',
@@ -34,28 +31,28 @@ export default defineAppConfig({
         pagePath: 'pages/index/index',
         text: '首页',
         iconPath: 'assets/images/tab-home.png',
-        selectedIconPath: 'assets/images/tab-home-active.png'
+        selectedIconPath: 'assets/images/tab-home-active.png',
       },
       {
         pagePath: 'pages/tasks/index',
         text: '任务',
         iconPath: 'assets/images/tab-tasks.png',
-        selectedIconPath: 'assets/images/tab-tasks-active.png'
+        selectedIconPath: 'assets/images/tab-tasks-active.png',
       },
       {
         pagePath: 'pages/store/index',
         text: '商城',
         iconPath: 'assets/images/tab-store.png',
-        selectedIconPath: 'assets/images/tab-store-active.png'
+        selectedIconPath: 'assets/images/tab-store-active.png',
       },
       {
         pagePath: 'pages/profile/index',
         text: '我的',
         iconPath: 'assets/images/tab-profile.png',
-        selectedIconPath: 'assets/images/tab-profile-active.png'
-      }
-    ]
-  }
+        selectedIconPath: 'assets/images/tab-profile-active.png',
+      },
+    ],
+  },
 })
 
 function defineAppConfig(config: Record<string, any>) {

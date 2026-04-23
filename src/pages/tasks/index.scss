@@ -216,3 +216,99 @@
   text-align: center;
   border-radius: 20rpx;
 }
+
+/* ─── 家长端数据页 ─────────────────────────────────────────── */
+
+.parent-data-header {
+  padding: 24rpx 24rpx 0;
+}
+
+.stats-row {
+  display: flex;
+  gap: 12rpx;
+  padding: 16rpx 24rpx 24rpx;
+}
+
+.stat-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 16rpx 8rpx;
+  text-align: center;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.06);
+}
+
+.stat-card-value {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  display: block;
+}
+
+.stat-card-label {
+  font-size: 20rpx;
+  color: #999;
+  display: block;
+  margin-top: 4rpx;
+}
+
+/* 热力图 */
+.heatmap-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rpx;
+}
+
+.heatmap-cell {
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 4rpx;
+  background: #ebedf0;
+}
+
+.heatmap-cell.level-1 { background: #9be9a8; }
+.heatmap-cell.level-2 { background: #40c463; }
+.heatmap-cell.level-3 { background: #30a14e; }
+
+.heatmap-cell.small {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 4rpx;
+  margin-top: 12rpx;
+  justify-content: flex-end;
+}
+
+.heatmap-legend-text {
+  font-size: 20rpx;
+  color: #999;
+  margin: 0 4rpx;
+}
+
+/* 完成记录 */
+.completion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.completion-time {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.completion-status {
+  font-size: 28rpx;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.bottom-safe {
+  height: 120rpx;
+}

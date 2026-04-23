@@ -12,32 +12,43 @@
   gap: 24rpx;
 }
 
+.profile-card.parent {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
 .avatar {
+  font-size: 80rpx;
   width: 120rpx;
   height: 120rpx;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 60rpx;
+  flex-shrink: 0;
 }
 
 .user-info {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
 }
 
 .nickname {
   font-size: 36rpx;
   font-weight: bold;
   color: #fff;
-  display: block;
-  margin-bottom: 16rpx;
+}
+
+.user-email {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .stats {
   display: flex;
-  gap: 40rpx;
+  gap: 32rpx;
 }
 
 .stat-item {
@@ -47,7 +58,7 @@
 }
 
 .stat-value {
-  font-size: 30rpx;
+  font-size: 28rpx;
   font-weight: bold;
   color: #fff;
 }
@@ -57,31 +68,32 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+/* 菜单列表 */
 .menu-list {
-  margin-top: 24rpx;
   background: #fff;
+  margin-top: 24rpx;
 }
 
 .menu-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32rpx;
+  padding: 28rpx 32rpx;
   border-bottom: 1rpx solid #f5f5f5;
 }
 
-.menu-item:active {
-  background: #f9f9f9;
+.menu-item:last-child {
+  border-bottom: none;
 }
 
 .menu-left {
   display: flex;
   align-items: center;
-  gap: 20rpx;
+  gap: 16rpx;
 }
 
 .menu-icon {
-  font-size: 40rpx;
+  font-size: 36rpx;
 }
 
 .menu-title {
@@ -92,7 +104,7 @@
 .menu-right {
   display: flex;
   align-items: center;
-  gap: 12rpx;
+  gap: 8rpx;
 }
 
 .menu-desc {
@@ -101,17 +113,19 @@
 }
 
 .menu-arrow {
-  font-size: 36rpx;
+  font-size: 32rpx;
   color: #ccc;
 }
 
+/* 退出登录 */
 .logout-btn {
-  margin: 32rpx;
+  margin: 48rpx 32rpx;
   background: #fff;
-  text-align: center;
-  padding: 28rpx;
   border-radius: 16rpx;
-  color: #ff4d4f;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: #f5576c;
   font-size: 30rpx;
   font-weight: bold;
 }

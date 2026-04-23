@@ -1,1 +1,100 @@
-placeholder { color: #fff }
+.exam-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding-bottom: 40rpx;
+}
+
+.exam-page-header {
+  padding: 32rpx 24rpx 16rpx;
+}
+
+.exam-page-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.exam-section-title {
+  padding: 24rpx 24rpx 12rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #666;
+}
+
+.exam-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  margin: 0 24rpx 16rpx;
+  border-radius: 20rpx;
+  padding: 24rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.06);
+  gap: 20rpx;
+}
+
+.exam-item.done {
+  opacity: 0.7;
+}
+
+.exam-item-left {
+  flex-shrink: 0;
+}
+
+.exam-item-emoji {
+  font-size: 48rpx;
+}
+
+.exam-item-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rpx;
+}
+
+.exam-item-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.exam-item-meta {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.exam-item-time {
+  font-size: 22rpx;
+  color: #667eea;
+}
+
+.exam-item-right {
+  flex-shrink: 0;
+}
+
+.exam-item-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-size: 26rpx;
+  font-weight: bold;
+  padding: 12rpx 28rpx;
+  border-radius: 12rpx;
+}
+
+.exam-item-btn.secondary {
+  background: #f0f0f0;
+  color: #666;
+}
+
+/* 骨架屏 */
+.skeleton-card {
+  background: #fff;
+  border-radius: 20rpx;
+  height: 120rpx;
+  margin: 0 24rpx 16rpx;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
