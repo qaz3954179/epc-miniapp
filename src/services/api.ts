@@ -262,4 +262,66 @@ export const parentApi = {
   /** 家长监控面板 */
   getMonitor: (childId: string) =>
     api.get(`/parent/monitor/${childId}`),
+
+  /** 宝贝概览 */
+  getChildDashboard: (childId: string) =>
+    api.get<{ child_id: string; nickname: string; coins: number; today_tasks: number; total_tasks: number }>(
+      `/parent/children/${childId}/dashboard`
+    ),
+
+  /** 宝贝任务完成记录 */
+  getChildCompletions: (childId: string, skip = 0, limit = 20) =>
+    api.get<TaskCompletionPublic[]>(
+      `/parent/children/${childId}/task-completions?skip=${skip}&limit=${limit}`
+    ),
+
+  /** 宝贝学习币明细 */
+  getChildCoinLogs: (childId: string, skip = 0, limit = 20) =>
+    api.get<CoinLogsResponse>(
+      `/parent/children/${childId}/coin-logs?skip=${skip}&limit=${limit}`
+    ),
+
+  /** 宝贝兑换记录 */
+  getChildRedemptions: (childId: string, skip = 0, limit = 20) =>
+    api.get<RedemptionsResponse>(
+      `/parent/children/${childId}/redemptions?skip=${skip}&limit=${limit}`
+    ),
+
+  /** 宝贝列表 */
+  getChildren: () =>
+    api.get<ChildAccountPublic[]>('/parent/children'),
+
+  /** 创建宝贝 */
+  createChild: (data: {
+    username: string; password: string; nickname: string;
+    gender: 'boy' | 'girl'; full_name?: string; birth_month?: string;
+  }) =>
+    api.post<ChildAccountPublic>('/parent/children', data),
+
+  /** 更新宝贝 */
+  updateChild: (childId: string, data: Record<string, unknown>) =>
+    api.put<ChildAccountPublic>(`/parent/children/${childId}`, data),
+
+  /** 删除宝贝 */
+  deleteChild: (childId: string) =>
+    api.delete<MessageResponse>(`/parent/children/${childId}`),
+}
+
+// 兑换管理
+export const redemptionApi = {
+  /** 所有兑换记录（管理员/家长） */
+  getAll: (skip = 0, limit = 20) =>
+    api.get<RedemptionsResponse>(`/redemptions/all?skip=${skip}&limit=${limit}`),
+
+  /** 发货 */
+  ship: (id: string, data?: { tracking_number?: string; shipping_company?: string }) =>
+    api.put<PrizeRedemptionPublic>(`/redemptions/${id}/ship`, data),
+
+  /** 完成 */
+  complete: (id: string) =>
+    api.put<PrizeRedemptionPublic>(`/redemptions/${id}/complete`),
+
+  /** 退款 */
+  refund: (id: string) =>
+    api.put<PrizeRedemptionPublic>(`/redemptions/${id}/refund`),
 }

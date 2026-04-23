@@ -11,6 +11,10 @@ export default defineAppConfig({
     'pages/achievements/index',
     'pages/growth/index',
     'pages/planet/index',
+    'pages/parent/garden',
+    'pages/parent/data',
+    'pages/parent/approve',
+    'pages/parent/profile',
   ],
   window: {
     backgroundTextStyle: 'light',
